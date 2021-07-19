@@ -1,0 +1,92 @@
+DAY_3 COOPER TRAINING 
+--------------------------------------------------------
+1)Print the maximum possible integer
+The program must accept an integer N as the input. The program must print the maximum possible Integer X which is less than N, but the sum of digits in X is greater than the sum of digits in N. If there is no such integer, the program must print the integer N as it is.
+
+Input Format
+
+35
+
+Output Format
+
+29
+
+Sample Input 0
+
+41
+Sample Output 0
+
+39
+Sample Input 1
+
+19
+Sample Output 1
+
+19
+CODE:
+n=int(input())
+
+sum1,sum2=0,0
+
+temp=n
+
+l=[]
+
+while(n):
+
+   rem=n%10
+
+   sum1=sum1+rem
+
+   n=n//10
+
+for i in range (1,temp+1):
+
+   temp2=i
+
+   sum2=0
+
+   while(i):
+
+      sum2+=i%10
+
+      i=i//10
+
+   if sum2>sum1:
+
+       l.append(temp2)
+
+#print(l)
+
+if(len(l)>0):
+
+     l.sort()
+
+     print(l[-1])
+
+else:
+
+    print(temp)
+
+   
+-----------------------------------------------------------------
+2)Print the missing alphabets
+The program must accept a string S containing only lower case alphabets as the input. The program must print the missing lower case alphabets in string S in alphabetical order as the output. Note: At least one lower case is always missing in the string S.
+
+Input Format
+
+The input must be in string which can include alphanumeric, number etc.
+Sample Input 0
+
+interview
+Sample Output 0
+
+abcdfghjklmopqsuxyz
+CODE:
+inp_str=str(input())
+for i in range (97,123):
+  if chr(i) in inp_str:
+     pass
+  else:
+     print(chr(i),end="")
+-----------------------------------------------------------------
